@@ -1,0 +1,25 @@
+.card{
+    margin-block: 50px;
+
+    p{
+        text-align: center;
+    }
+
+}
+
+.card-img-bottom{
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.card-text{
+    p{
+        text-align: center;
+    }
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+}

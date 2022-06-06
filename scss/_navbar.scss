@@ -1,0 +1,104 @@
+.navbar{
+    background-color: $color3;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    top: 0;
+
+    @include Small{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: static;
+    }
+    @include Medium{
+        flex-direction: row;
+        position: sticky;
+        justify-content: space-evenly;
+    }
+
+    & li{
+        display: inline-block;
+        padding: 5px;
+        font-size: 1.2rem;
+        margin: 5px;
+        border: 1px solid $white;
+        width: 7.8rem;
+        border-radius: 8px;
+        text-align: center;
+        &:hover{
+            background-color: $color1;
+            transition: ease-out 0.3s;
+            box-shadow: inset 100% 0 0 0 $color1;
+            border-radius: 8px;
+        }
+
+        @include Small{
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        & a{
+            text-decoration: none;
+            color: $white;
+        }
+    }
+    & ul{
+        list-style: none;
+        font-size: 0;
+        & li{
+            display: none;
+            position: relative;
+            text-align: center;
+            align-self: center;
+            opacity: .9;
+            width: 200px;
+            &:hover ul{
+                display: block;
+                background-color: $color3;
+            }
+            @include Large{
+                display: block;
+            }
+            
+        }
+        & ul{
+            position: absolute;
+            display: none;
+            background-color: $color1;
+            border: 3px solid $white;
+            border-radius: 5px;
+            & li{
+                margin-left: 0px;
+                padding-left: 2px;
+                & a{
+                    text-decoration: none;
+                    display: block;
+                }
+            }
+        }
+        
+    }
+    & p{
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+}
+
+.logo{
+    img{
+        height: 200px;
+        width: 200px;
+        transition: all 500ms;
+        &:hover{
+        
+            transform: scale(1.1);
+        }
+    }   
+}
